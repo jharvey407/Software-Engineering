@@ -15,11 +15,11 @@ def test(test_x, test_y, sx, sy, sr):
 
 def is_covered(room, sensors):
         
-    width = room[0] # get the width of the room
-    height = room[1] # get the height of the room
+    length = room[0] # get the width of the room
+    width = room[1] # get the height of the room
         
-    for x in range(width):              # loop through width
-        for y in range(height):         # loop through heights
+    for x in range(length):              # loop through width
+        for y in range(width):         # loop through heights
             for sensor in sensors:      # loop through the list of sensors
                                         # load variables for current sensor
                 sx = sensor[0]          # sensor x location
