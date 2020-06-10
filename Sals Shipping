@@ -1,0 +1,39 @@
+# Sal's shipping calculator
+
+# Get weight of package in pounds
+def shipping_calculator(package_weight):
+  
+# Calculate ground shipping cost
+  if package_weight <= 2.0:
+    ground_shipping = package_weight * 1.5 + 20
+  elif package_weight <= 6.0:
+    ground_shipping = package_weight * 3 + 20
+  elif package_weight <= 10.0:
+    ground_shipping = package_weight * 4 + 20
+  else:
+    ground_shipping = package_weight * 4.75 +20
+    
+# Calculate drone shipping cost
+  if package_weight <= 2.0:
+    drone_shipping = package_weight * 4.5
+  elif package_weight <= package_weight * 6.0:
+    drone_shipping = package_weight * 9.0
+  elif package_weight <= 10.0:
+    drone_shipping = package_weight * 12
+  else: 
+    drone_shipping = package_weight * 14.25
+    
+# Compare costs
+  if ground_shipping < drone_shipping and ground_shipping < 125:
+    return "Your shipping cost is $" + str(ground_shipping) + " via Ground."
+  elif drone_shipping < ground_shipping and drone_shipping < 125:
+    return "Your shipping cost is $" + str(drone_shipping) + " via Drone."
+  else:
+    return "Your shipping cost is $125.00 via Premium Ground."
+  
+print(shipping_calculator(1))
+print(shipping_calculator(4))
+print(shipping_calculator(8.4))
+print(shipping_calculator(12))
+print(shipping_calculator(100))
+print(shipping_calculator(2.1))
