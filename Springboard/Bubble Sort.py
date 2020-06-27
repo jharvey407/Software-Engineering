@@ -8,21 +8,10 @@ Created on Thu Jun 25 06:49:03 2020
 # Second test commit, without pushing the first commit
 
 def bubbleSort(lst):
-    print(lst)
-    # Primary loop
-    # Loop through the list the number of items in the list
     for j in range(len(lst)):
-        # Secondary loop
-        # Loop throuhg the list swapping higher numbers with lower numbers
-        output = []
-        for i in range(1,len(lst) - j):
-            # Test if this number is smaller then the previous number
+        for i in range(1,len(lst)):
             if lst[i] < lst[i-1]:
-                # Swap the numbers
                 lst[i], lst[i-1] = lst[i-1], lst[i]
-            output.append(lst[i-1])
-        print(output)
-            
     return(lst)
 
 test0 = [3, 22, 14, 434, 501, 11, 9, 1230, 304, 123, 5412, 381923, 302, -3, 1]
@@ -34,9 +23,6 @@ test2 = [100, 0, 0, -20, 30, -5]
 test3  = [28, 4, 17, 666, 1001, 52, 61, 30]
 
 print(bubbleSort(test0))
-print()
 print(bubbleSort(test1))
-print()
 print(bubbleSort(test2))
-print()
 print(bubbleSort(test3))
