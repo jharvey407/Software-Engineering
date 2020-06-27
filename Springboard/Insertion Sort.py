@@ -15,13 +15,19 @@ def insertionSort(lst):
         # Loop through all values in list
         
         for j in range(0,i):
-            print('Test ', lst[i], '<', lst[j])
+            print('i = ', i, ' j = ', j, 'Test ', lst[i], '<', lst[j])
+            
             # If current value is smaller then the test value swap values
             if lst[i] < lst[j]:
-                lst[i], lst[j] = lst[j], lst[i]
+                print('Insert ', lst[i], ' at ', j)
+                lst.insert(j, lst[i])
                 print(lst)
-            
+                print('pop ', lst[i+1], ' at ', i+1)
+                lst.pop(i+1)
+                print(lst)
+                
         print(lst)
+        print()
     return lst
 
 test0 = [3, 22, 14, 434, 501, 11, 9, 1230, 304, 123, 5412, 381923, 302, -3, 1]
