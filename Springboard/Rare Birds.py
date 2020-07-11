@@ -103,9 +103,6 @@ for k, v in rarebirds.items():
 # Print command for testing
 # print(rarebirds)
 
-# Create an Encounter variable with the default value of True
-encounter = True
-
 # Create a list of rare birds from our dictionary to use as a reference for sighting
 rarebirdslist = []
 for bird in rarebirds.keys():
@@ -114,15 +111,17 @@ for bird in rarebirds.keys():
 # print command for testing
 # print(rarebirdslist)
 
+# Create an Encounter variable with the default value of True
+encounter = False
 
-while encounter:
+while not encounter:
     # Ask the user what bird they have seen
     sighting = input('What did you see? ').lower()
 
     # Compare our sighting to our rarebirds list, print confirmation message
     if sighting in (rarebirdslist):
         print("This is one of the birds we're looking for!")
-        break
+        encounter = True
     else:
         print("That's not one of the birds we're looking for.")
     
