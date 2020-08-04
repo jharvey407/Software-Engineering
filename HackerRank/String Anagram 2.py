@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Aug  2 07:12:51 2020
 
@@ -20,12 +19,10 @@ def stringAnagram(dictionary, query):
     for word in query:                          # For each word
         an_count = 0                            # Start count at 0
         for string in dictionary:               # Test against each string
-            if len(word) == len(string):        # If the lengths are differnt exit
-                for char in word:               # Check if each char is in the string
-                    if char not in string:      # If it's not
-                        break                   # Exit the loop
-                    else:
-                        an_count += 1           # Else it's an anagram increment the count
+            if sorted(word) == sorted(string):  # If sorted strings match
+                an_count += 1                   # They are anagrams
+            else:
+                an_count = an_count             # Else it's not 
         anagrams.append(an_count)               # At the end of the dictionary add the number to the list
     return(anagrams)                            # Return the list
            
