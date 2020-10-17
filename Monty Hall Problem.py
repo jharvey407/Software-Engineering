@@ -56,6 +56,5 @@ plt.ylim(0,1)
 positions = (0, .2, .4, .6, .66, .8, 1)
 labels = ('0', '20', '40', '60', '66', '80', '100')
 plt.yticks(positions, labels, fontsize=24)
-art.Artist.set_animated
 plt.plot(success)
 plt.show()
